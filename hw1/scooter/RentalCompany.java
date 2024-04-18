@@ -49,7 +49,7 @@ public class RentalCompany {
         for (Scooter scooter: scooters) {
             if (scooter.getId() == id && scooter.isAvailable()) {
                 rented = true;
-                scooter.setAvailable = false;
+                scooter.setAvailable(false);
                 break;
             }
         }
@@ -60,7 +60,7 @@ public class RentalCompany {
     public boolean returnScooter(int id, double x, double y) {
         for (Scooter scooter: scooters) {
             if (scooter.getId() == id && scooter.isAvailable() == false) {
-                scooter.setAvailable = true;
+                scooter.setAvailable(true);
                 scooter.setY(y);
                 scooter.setX(x);
                 break;
